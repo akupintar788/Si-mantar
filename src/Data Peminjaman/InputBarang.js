@@ -1,5 +1,5 @@
 import React from "react";
-import "./Tambahbarang.css";
+import "./InputBarang.css";
 
 function InputBarang() {
   const submitData = () => {

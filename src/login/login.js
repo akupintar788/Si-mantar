@@ -1,12 +1,25 @@
 import React from "react";
 import "./login.css";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import InputBarang from "../Data Peminjaman/InputBarang";
 
 function Login() {
+  const navigate = useNavigate(); // Menggunakan hook useNavigate untuk navigasi
+
+  const handleSubmit = (event) => {
+    event.preventDefault(); // Hindari perilaku bawaan submit
+
+    // Lakukan tindakan setelah tombol "Login" ditekan
+    // Anda dapat menambahkan kode di sini untuk memproses data login, dll.
+
+    // Navigasi ke halaman InputBarang
+    navigate("/InputBarang");
+  };
+
   return (
     <div>
       <head>
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Login Form | Dan Aleko</title>
         <link rel="stylesheet" href="login.css" />
@@ -34,27 +47,17 @@ function Login() {
               </label>
               <a href="#">Forgot Password</a>
             </div>
-            <Link to="/Inputbarang">
-  <button type="submit" className="btn">Login</button>
-</Link>
+            <button onClick={InputBarang} type="submit" className="btn">
+  Login
+</button>
             <div className="register-link">
-              <p>
-                Dont have an account? <a href="#">Register</a>
-              </p>
+           
             </div>
           </form>
         </div>
       </body>
     </div>
   );
-
-  // Fungsi untuk menangani submit form
-  function handleSubmit(event) {
-    event.preventDefault(); // Hindari perilaku bawaan submit
-
-    // Lakukan tindakan setelah tombol "Login" ditekan
-    // Anda dapat menambahkan kode di sini untuk memproses data login, dll.
-  }
 }
 
 export default Login;

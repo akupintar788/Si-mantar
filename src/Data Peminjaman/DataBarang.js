@@ -1,10 +1,10 @@
-import "./Data Peminjaman";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import logo from "../assets/smk ijo.jpg";
-import "./Data Peminjaman.css";
+import "./DataBarang.css";
+import "./DataBarang";
 
-function Dasboard() {
+function DataBarang() {
   return (
     <container>
       <div class="container">
@@ -14,7 +14,7 @@ function Dasboard() {
               <a href="#">
                 <span className="">
                   <div className="logo1">
-                    <img src={logo} alt="Logo"/>
+                    <img src={logo} alt="Logo" />
                   </div>
                 </span>
                 <span className="title">Brand Name</span>
@@ -65,7 +65,7 @@ function Dasboard() {
                 <span class="title">Settings</span>
               </a>
             </li>
-            
+
             <li>
               <a href="#">
                 <span class="icon">
@@ -74,7 +74,7 @@ function Dasboard() {
                 <span class="title">Password</span>
               </a>
             </li>
-            
+
             <li>
               <a href="#">
                 <span class="icon">
@@ -165,9 +165,7 @@ function Dasboard() {
                     <td>Kategori</td>
                     <td>Tanggal Pembelian</td>
                     <td>Harga</td>
-                    <td>
-                      Letak barang
-                    </td>
+                    <td>Letak barang</td>
                     <td>Jumlah</td>
                   </tr>
                 </thead>
@@ -367,4 +365,4 @@ function Dasboard() {
     </container>
   );
 }
-export default Dasboard;
+export default DataBarang;

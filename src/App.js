@@ -1,13 +1,19 @@
+import React from "react";
+import { BrowserRouter, Route } from "react-router-dom";
 import "./App.css";
-import Dasboard from "./Data Peminjaman/Data Peminjaman";
+import InputBarang from "./Data Peminjaman/InputBarang";
 import Login from "./login/login";
-import InputBarang from "./Data Peminjaman/Tambahbarang";
+import DataBarang from "./Data Peminjaman/DataBarang";
 
 function App() {
   return (
-    <div>
-      <Login />
-    </div>
+    <BrowserRouter>
+      <div>
+        <Route exact path="/" component={Login} />
+        <Route path="/InputBarang" component={InputBarang} />
+        <Route path="/DataBarang" component={DataBarang} />
+      </div>
+    </BrowserRouter>
   );
 }
 
